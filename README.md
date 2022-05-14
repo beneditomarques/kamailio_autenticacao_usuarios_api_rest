@@ -19,7 +19,7 @@ make up
 make stop
 ```
 
-<h3>Step-by-ste</h3>
+<h3>Step-by-step</h3>
 
 1. Configurar as variáveis de ambiente do projeto
 2. Antes de realizar o start up, descomente as linhas abaixo no arquivo kamailio_autenticacao_usuarios_api_rest/mongodb/collections/initdb.js para que a API possa utilizar o banco de dados com as credenciais escolhidas por você.
