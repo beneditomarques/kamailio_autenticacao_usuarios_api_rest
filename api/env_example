@@ -1,0 +1,18 @@
+#Mongodb Host/IP 
+DB_SERVER=mongodb
+#Mongodb port
+DB_PORT=27017
+#Mongodb db name
+DB_NAME=kamailio
+#Mongodb user
+DB_USER=
+#Mongodb password
+DB_PASSWORD=
+#Kind of environment (dev/prod)
+ENVIRONMENT=dev
+#API port
+PORT=8000
+#API user for authentication
+API_USER=
+#API password for authentication
+API_PASSWORD=
