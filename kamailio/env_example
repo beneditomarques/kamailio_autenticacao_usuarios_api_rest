@@ -1,0 +1,8 @@
+#API server Host/IP
+API_SERVER=api
+#API server port
+API_PORT=8000
+#API user for authentication
+API_USER=
+#API password for authentication
+API_PASSWORD=

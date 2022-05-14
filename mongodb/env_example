@@ -1,0 +1,6 @@
+#Mongodb user
+MONGO_INITDB_ROOT_USERNAME=root
+#Mongodb password
+MONGO_INITDB_ROOT_PASSWORD=root_password
+#Mongodb initial db name to be created on boot
+MONGO_INITDB_DATABASE=kamailio
