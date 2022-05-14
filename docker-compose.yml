@@ -1,0 +1,56 @@
+version: "3.4"
+services:
+
+  mongodb:
+    restart: always
+    image: mongodb:latest
+    ports:
+     - "27017:27017/tcp" 
+    env_file:
+     - mongodb/.env     
+    volumes:      
+      - ./mongodb/storage:/data/db
+    networks:
+      internal: 
+
+  mongo-express:
+    restart: always
+    image:  mongo-express:latest
+    ports:
+     - "8081:8081/tcp"  
+    depends_on:
+      - "mongodb"
+    env_file:
+     - mongo-express/.env         
+    networks:
+      internal: 
+
+  api:
+    restart: always
+    image: api:latest
+    env_file:
+      - api/.env   
+    volumes:      
+      - ./api/conf/app:/app
+    ports:
+      - "8000:8000/tcp"          
+    networks:
+      internal:   
+
+
+  kamailio:
+    restart: always
+    image: kamailio:latest
+    env_file:
+      - kamailio/.env
+    volumes:
+      - ./kamailio/conf/etc/kamailio/kamailio.cfg:/etc/kamailio/kamailio.cfg
+    ports:
+      - "5060:5060/udp"
+    networks:
+      internal:
+
+networks:
+  internal:
+    external: false
+
